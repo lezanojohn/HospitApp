@@ -1,0 +1,172 @@
+.cuadroCinco {
+	width: 40%;
+	height: 50%;
+	position: relative;
+	top: 40px;
+	margin: auto;
+	background-color: rgba(14,14,14,.7);
+	border-radius: 10px;
+	-webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.cuadroCinco .contact_form {
+	width: 100%;
+}
+
+
+.contact_form h2 {
+	margin: auto;
+	display: block;
+    color: #fff;
+    font-size: 25px;
+    padding: 5px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+
+
+/*— estilos para los ul y li del formulario —*/
+.contact_form ul {
+    width:100%;
+    list-style-type:none;
+	margin:auto;
+	padding:0px;
+}
+
+.contact_form li{
+	padding:12px; 
+	border-bottom:1px solid #eee;
+	position:relative;
+} 
+
+.contact_form label {
+    color: #fff;
+	text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    display: inline-block;
+    float: left;
+    font-family: calibri;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 3px;
+    width: 90px;
+}
+
+.contact_form input {
+	height:20px; 
+	width:300px; 
+	padding:5px 8px;
+}
+
+.contact_form textarea {
+	padding:8px; 
+	width:300px;
+}
+
+ 
+/*—– estilos visuales de los elementos ——–*/
+.contact_form input, .contact_form textarea { 
+	  border:1px solid #aaa;
+	  box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+	  border-radius:2px;
+	  color: #888;
+	  font-size: 12px;
+	  padding-right:60px;
+	  -moz-transition: padding .25s; 
+	  -webkit-transition: padding .25s; 
+	  -o-transition: padding .25s;
+	  transition: padding .25s;
+}
+
+.contact_form input:focus, .contact_form textarea:focus {
+	background: #fff; 
+	border:1px solid #555; 
+	box-shadow: 0 0 3px #aaa; 
+	padding-right:80px;
+}
+ 
+
+/* === Estilos de Validacion === */ 
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+	box-shadow: 0 0 15px #5cd053;
+	border-color: #28921f;
+}
+
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	box-shadow: 0 0 15px #d45252;
+	border-color: #b03535;
+}
+ 
+
+/* === Estilos del boton de Envio === */
+button.submit {
+   padding: 9px 17px;
+   font-family: Helvetica,calibri, Arial, sans-serif;
+   font-weight: bold;
+   line-height: 1;
+   color: #444;
+   border: none;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+   background-image: -moz-linear-gradient(0% 100% 90deg, #BBBBBB, #FFFFFF);
+   background-color: #fff;
+   border: 1px solid #f1f1f1;
+   border-radius: 10px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+button.submit:hover {
+	opacity:.55;
+	cursor: pointer; 
+	color: #fff;
+}
+
+button.submit:active {
+	border: 1px solid #222;
+	box-shadow: 0 0 10px 5px #444 inset; 
+}
+
+
+@media screen and (max-width: 1300px){
+	
+	.cuadroCinco {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 1100px){
+	
+	.cuadroCinco {
+		width: 70%;
+	}
+	
+}
+
+@media screen and (max-width: 700px){
+	
+	.cuadroCinco {
+		width: 100%;
+	}
+	
+}
+
+@media screen and (max-width: 500px){
+	
+	.cuadroCinco {
+		height: 65%;
+	}
+	
+	.contact_form input, .contact_form textarea {
+		width: 80%;
+	}
+	
+	.contact_form input, .contact_form textarea { 
+		padding-right: 20px;
+	}
+	
+	.contact_form input:focus, .contact_form textarea:focus{
+		padding-right: 60px;
+	}
+}

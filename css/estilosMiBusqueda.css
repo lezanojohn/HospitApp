@@ -1,0 +1,144 @@
+.cuadroTres {
+	width: 100%;
+	height: 75%;
+	position: relative;
+	top: 65px;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.cuadroTres p {
+	margin: auto;
+	color: #FFF;
+	font-size: 17px;
+	padding: 10px;
+}
+
+
+.cuadroTres .cuadroInfoHosp {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+
+.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar {
+	width: 100%;
+	height: 20%;
+	background-color: rgba(14,14,14,.7);
+}
+
+.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar .btnFiltro {
+	width: 210px;
+	padding: 20px;
+	margin: 10px 20px;
+	font-size: 20px;
+	background-color: rgba(255,255,255,.8);
+	border-radius: 15px;
+	border: 2px solid black;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+   -o-transition: all 500ms ease;
+   transition: all 500ms ease;
+}
+
+.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar .btnFiltro:hover {
+	background-color: rgba(34,101,255,.8);
+	font-size: 21px;
+	cursor: pointer; 
+}
+
+.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar #btnMostrarAccesos, .cuadroTres .cuadroInfoHosp .cuadroBotonMostrar #btnMostrarPersonal, .cuadroTres .cuadroImagen .cuadroComandos #panelMostrarInfoExtra, .cuadroTres .cuadroInfoHosp .cuadroInfoContacto #info, .cuadroTres .cuadroImagen .cuadroInfoExtra #accesos, .cuadroTres .cuadroImagen .cuadroInfoExtra #tabla {
+	display: none;
+}
+
+
+.cuadroTres .cuadroInfoHosp .cuadroInfoContacto {
+	width: 100%;
+	height: 80%;
+	background-color: rgba(14,14,14,.7);
+}
+
+.cuadroTres .cuadroInfoHosp .cuadroInfoContacto #info img {
+	width: 80%;
+	margin-top: 60px;
+}
+
+
+
+
+.cuadroTres .cuadroImagen {
+	display: inline-block;
+	width: 69%;
+	height: 100%;
+	
+}
+
+.cuadroTres .cuadroImagen .cuadroComandos {
+	width: 100%;
+	height: 10%;
+	background-color: rgba(14,14,14,.7);
+}
+
+.cuadroTres .cuadroImagen .cuadroComandos #panelMostrarInfoExtra {
+	position: relative;
+	top: 20px;
+}
+
+.cuadroTres .cuadroImagen .cuadroInfoExtra {
+	width: 100%;
+	height: 90%;	
+	background-color: rgba(14,14,14,.7);
+	overflow-y: scroll;
+}
+
+
+
+.cuadroTres .cuadroImagen .cuadroInfoExtra #tabla {
+	padding: 5px;
+	color: #FFF;
+}
+
+
+@media screen and (max-width: 1000px){
+	
+	.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar .btnFiltro {
+		width: 120px;
+		font-size: 13px;
+		padding: 5px 1px;
+		margin-top: 30px;
+	}
+	
+	.cuadroTres .cuadroInfoHosp .cuadroBotonMostrar .btnFiltro:hover {
+		font-size: 13px;
+	}
+	
+	.cuadroTres .cuadroImagen .cuadroComandos #panelMostrarInfoExtra{
+		top: 10px;
+	}
+	
+	.cuadroTres .cuadroInfoHosp, .cuadroTres .cuadroImagen {
+		width: 100%;
+		height: 60%;
+	}
+	
+	.cuadroTres .cuadroInfoHosp .cuadroInfoContacto #info img {
+		width: 200px;
+		margin-top: 20px;
+}
+	
+
+}
+
+@media screen and (max-width: 600px){
+	.cuadroTres .cuadroInfoHosp{
+		height: 47%;
+	}
+	
+	.cuadroTres p {
+		font-size: 12px;
+	}
+}
+

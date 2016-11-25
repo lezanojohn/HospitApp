@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Proyecto Hospitapp - Equipo 1</title>
+	
+	<!-- meta -->
+	<meta name="author" content="Equipo 1 - Taller de Ingenieria de Software">
+    <meta name="description" content="Proyecto Hospitapp. Aplicación de busqueda de centros asistenciales en el gran concepción."> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<!-- estilos -->
+	<link href="css/iconos.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosIndex.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosBarraNav.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosBarraNavResponsive.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosHome.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosMapa.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosMiBusqueda.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosNosotros.css" rel="stylesheet" type="text/css">
+	<link href="css/estilosContacto.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
+	<!-- scripts -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/barraNav.js"></script>
+	<script type="text/javascript" src="js/barraNavResponsivo.js"></script>
+	<script type="text/javascript" src="js/OnePageScroll.js"></script>
+	<script type="text/javascript" src="js/menuHome.js"></script>
+	<script type="text/javascript" src="js/menuMiBusqueda.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2pJxixy-TmyrjUhtC5XA4DunsdLge4AI&callback=initMap"
+        async defer></script>
+  	<script type="text/javascript" src="js/Busq_y_Rend_Mapa.js"></script>
+
+
+</head>
+<body>
+	<nav class="barraNav">
+		<h1 class="recargarPagina">HOSPITAPP</h1>
+		<ul class="ctdMenu">
+			<li><a href="#seccionBuscar">Buscar</a></li>
+			<li><a href="#seccionMapa">Mapa</a></li>
+			<li><a href="#seccionInformacion">Mi Busqueda</a></li>
+			<li><a href="#seccionQuienesSomos">¿Quienes Somos?</a></li>
+			<li><a href="#seccionContactanos">Contactanos</a></li>
+		</ul>
+	</nav>
+	
+	<nav class="barraNavResponsive">
+		<h1 class="recargarPagina">HOSPITAPP</h1>
+		<div class="btnMenuResponsive"><span class="icon-bars"></span></a>
+		<ul class="ctdMenuResponsive">
+			<li><a href="#seccionBuscar" class="btnBarraNavResp">Buscar</a></li>
+			<li><a href="#seccionMapa" class="btnBarraNavResp">Mapa</a></li>
+			<li><a href="#seccionInformacion" class="btnBarraNavResp">Mi Busqueda</a></li>
+			<li><a href="#seccionQuienesSomos" class="btnBarraNavResp">¿Quienes Somos?</a></li>
+			<li><a href="#seccionContactanos" class="btnBarraNavResp">Contactanos</a></li>
+		</ul>
+	</nav>
+	
+	<section class="estructura">
+		<!--contenido 1-->
+		<article class="contenido">
+			<a id="seccionBuscar"></a>
+			<h1>Encuentre su Centro Médico favorito en 3 simples pasos</h1>
+			<div class="cuadroUno">
+				
+				<h1 id="tituloUno" class="titulo">¿Desde dónde viajara?</h1>
+				<h1 id="tituloIntermedioUno" class="titulo">Ingrese una dirección:</h1>
+				<h1 id="tituloDos" class="titulo">¿Cómo desea realizar la busqueda?</h1>
+				<h1 id="tituloIntermedioDos" class="titulo">Seleccione una Especialidad:</h1>
+				<h1 id="tituloIntermedioTres" class="titulo">Seleccione una opción según su Sistema de Salud:</h1>
+				<h1 id="tituloTres" class="titulo">Estos son los centros médicos disponibles:</h1>
+				<h1 id="tituloCuatro" class="titulo">¿Desea realizar una nueva busqueda?</h1>
+				
+				<!--nivel 1-->
+				<!-- busqueda por geolocalizacion -->
+				<input type="button" class="btnFiltro" id="btnGeolocalizame" value="Usar mi posición">
+				<!-- busqueda por direccion -->
+				<input type="button" class="btnFiltro" id="btnDireccion" value="Usar una dirección">
+				
+				<!--nivel 2-->
+				<!-- filtro cercania -->
+				<input type="button" class="btnFiltro" id="btnPorCercania" value="Por Cercanía">
+				<!--nivel 2-->
+				<!-- filtro especialidad -->
+				<input type="button" class="btnFiltro" id="btnPorEspecialidad" value="Por Especialidad">
+						<!--nivel intermedio 2-->
+						<input type="button" class="btnFiltro" id="btnCirugiaAdultos" value="Cirugía Adultos">
+						<input type="button" class="btnFiltro" id="btnKinesiologia" value="Kinesiología">
+						<input type="button" class="btnFiltro" id="btnMedicinaGeneral" value="Medicina General">
+						<input type="button" class="btnFiltro" id="btnPediatriaGeneral" value="Pediatría General">
+						<input type="button" class="btnFiltro" id="btnTraumatologia" value="Traumatología">
+				<!--nivel 2-->
+				<!-- filtro por nombre -->
+				<input type="button" class="btnFiltro" id="btnMostrarTodos" value="Mostrar Todos">
+				<!--nivel 2-->
+				<!-- filtro por afiliacion -->
+				<input type="button" class="btnFiltro" id="btnPorPrevision" value="Por Previsión">
+					<!--nivel intermedio 3-->
+					<input type="button" class="btnFiltro" id="btnFonasa" value="Fonasa">
+					<input type="button" class="btnFiltro" id="btnCruzBlanca" value="Cruz Blanca">
+					<input type="button" class="btnFiltro" id="btnMasvida" value="Masvida">
+					<input type="button" class="btnFiltro" id="btnConsalud" value="Consalud">
+					<input type="button" class="btnFiltro" id="btnBanmedica" value="Banmédica">
+				<!--nivel 3-->
+				<input type="button" class="btnFiltro" id="btnCBB" value="Clínica Bio Bio">
+				<input type="button" class="btnFiltro" id="btnCT" value="CESFAM Tucapel">
+				<input type="button" class="btnFiltro" id="btnHH" value="Hospital Higueras">
+				
+				<!--nivel 4-->
+				<!-- realizar una nueva busqueda -->
+				<input type="button" class="btnFiltro" id="btnOtraBusqueda" value="Buscar otra vez">
+				
+				<!--nivel intermedio 1-->
+				<!-- formulario consulta por direccion -->
+				<div class="form center">
+					<form action="" method="post" name="search_form" id="search_form">
+						<input type="text" name="search" id="textoDir" placeholder="Calle N°, Ciudad" required>
+						<input type="button" class="btnFiltro" id="btnBuscarDir" value="Buscar">
+					</form>
+				</div>
+				
+			</div>
+			
+		</article>
+		
+		<!--contenido 2-->
+		<article class="contenido">
+			<a id="seccionMapa"></a>
+			<h1>Para más información haz click <a href="#seccionInformacion">AQUÍ</a></h1>
+			<div class="cuadroDos">
+				<div id="panelFlotante">
+					<b>Modo de viaje: </b>
+					<select id="modo">
+						<option value="DRIVING">Automóvil</option>
+						<option value="WALKING">Caminando</option>
+						<option value="TRANSIT">Bus</option>
+					</select>
+				</div>
+				<div id="mapa"></div>	
+				<div id="tablaBuses"></div>		
+			</div>
+		</article>
+		
+		<!--contenido 3-->
+		<article class="contenido">
+			<a id="seccionInformacion"></a>
+			<div class="cuadroTres">
+				<div class="cuadroInfoHosp">
+					<div class="cuadroInfoContacto">
+						<p id="avisoUno">Aun no ha realizado ninguna busqueda</p>
+						<div id="info"></div>
+					</div>
+					<div class="cuadroBotonMostrar">
+						<input type="button" class="btnFiltro" id="btnMostrarAccesos" value="Mostrar Accesos">
+						<input type="button" class="btnFiltro" id="btnMostrarPersonal" value="Mostrar Médicos">
+					</div>
+				</div>
+					
+				<div class="cuadroImagen">
+					<div class="cuadroComandos">
+						<p id="avisoDos">Aun no ha realizado ninguna busqueda</p>
+						<div id="panelMostrarInfoExtra">
+							<b style="color:#FFF">Filtrar por: </b>
+							<select id="opcion">
+								<option value="todos" selected>Todos</option>
+								<option disabled>--------Especialidad---------</option>
+								<option value="Médico General">Medicina General</option>
+								<option value="Traumatólogo">Traumatología</option>
+								<option value="Pediatra">Pediatría</option>
+								<option value="Kinesiólogo">Kinesiología</option>
+								<option value="Cirugía Adulto">Cirugía Adultos</option>
+								<option disabled>---------Previsión--------------</option>
+								<option value="Fonasa">Fonasa</option>
+								<option value="Cruz Blanca">Cruz Blanca</option>
+								<option value="Masvida">Masvida</option>
+								<option value="Consalud">Consalud</option>
+								<option value="Banmédica">Banmédica</option>
+							</select>
+						</div>
+					</div>
+					<div class="cuadroInfoExtra">
+						<div id="accesos"></div>					
+						<div id="tabla"></div>
+					</div>
+				</div>
+			</div>
+		</article>
+		
+		<!--contenido 4-->
+		<article class="contenido">
+			<a id="seccionQuienesSomos"></a>
+				<h1>Nuestro equipo de desarrollo:</h1>
+				<div class="cuadroCuatro">
+					<div class="nosotros">
+					  <ul>
+						  <li>
+					  	  	  <img src="img/franciscomontero.png">
+						  	  <p>Francisco Javier Montero Palma<br>
+						  	     Jefe de Equipo / Diseñador<br>
+						  	     Estudiante de Ingeniería Civil Informática<br>
+						  	     fjmontero@ing.ucsc.cl</p>
+						  </li>
+						  <li>
+						  	  <img src="img/cristophermartel.png">
+						  	  <p>Cristopher Enrique Martel Cerna<br>
+						  	  Analista<br>
+						  	  Estudiante de Ingeniería Civil Informática<br>
+						  	  cemartel@ing.ucsc.cl</p>
+						  </li>
+						  <li>
+						  	  <img src="img/johnlezano.png">
+						  	  <p>John Kary Lezano Vasquez<br>
+						  	  Programador<br>
+						  	  Estudiante de Ingeniería Civil Informática<br>
+						  	  jklezano@ing.ucsc.cl</p>
+						  </li>
+						  <li>
+						  	  <img src="img/juansalazar.png">
+						  	  <p>Juan Ignacio Salazar Valdebenito<br>
+						  	  Tester<br>
+						  	  Estudiante de Ingeniería Civil Informática<br>
+						  	  jisalazar@ing.ucsc.cl</p>
+						  </li>
+					  </ul>
+			   		</div>	
+				
+			</div>
+		</article>
+		
+		<!--contenido 5-->
+		<article class="contenido">
+			<a id="seccionContactanos"></a>
+			<h1>Contactanos via E-mail:</h1>
+			 <div class="cuadroCinco">
+				 <form class="contact_form" action="mailto:jklezano@ing.ucsc.cl" method="post">
+					  <ul>
+						   <li>
+								  <h2>Formulario de Contacto</h2>
+						   </li>
+						   <li>
+								 <label for="name">Nombre:</label>
+								 <input type="text"  placeholder="Nombre" required />
+						   </li>
+						   <li>
+								 <label for="email">Email:</label>
+								 <input type="email" name="email" placeholder="Dirección de correo electronico" required />
+						   </li>
+						   <li>
+								 <label for="Mensaje">Mensaje:</label>
+								 <textarea name="Mensaje" cols="40" rows="6" placeholder="Tu Mensaje" required ></textarea>
+						   </li>
+						   <li>
+							 <button class="submit" type="submit" >Enviar</button>
+						   </li>
+					  </ul>
+				 </form>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

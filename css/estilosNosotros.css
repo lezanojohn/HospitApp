@@ -1,0 +1,90 @@
+.cuadroCuatro{
+	width: 80%;
+	height: 60%;
+	position: relative;
+	top: 40px;
+	margin: auto;
+	background-color: rgba(14,14,14,.7);
+	border-radius: 10px;
+}
+
+.cuadroCuatro ul {
+	list-style: none;
+	width: 88%;
+}
+
+.cuadroCuatro ul li {
+	display: inline-block;
+	position: relative;
+	left: -60px;
+	width: 16%;
+	padding: 40px 30px;
+	vertical-align: top;
+}
+
+.cuadroCuatro ul li img {
+	display: inline-block;
+	width: 80%;
+	min-width: 80px;
+	margin: auto;
+	vertical-align: text-top;
+	margin-bottom: 10px;
+}
+
+.cuadroCuatro ul li p {
+	display: inline-block;
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	color: #DFDFDF;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.cuadroCuatro ul li br {
+	line-height: 40px;
+}
+
+@media screen and (max-width: 1000px){	
+	
+	.cuadroCuatro ul li {
+		display: block;
+		width: 100%;
+		height: 100px;
+		padding: 5px;
+		position: relative;
+		left: -40px;
+	}
+	
+	.cuadroCuatro ul li img {
+		width: 10%;
+		position: relative;
+		top: -40px;
+		left: 10px;
+	}
+	
+	.cuadroCuatro ul li p {
+		position: relative;
+		top: 20px;
+	}
+	
+	.cuadroCuatro ul li br {
+		line-height: 20px;
+	}
+	
+}
+
+@media screen and (max-width: 600px){
+	
+	.cuadroCuatro {
+		width: 100%;
+	}
+	
+	.cuadroCuatro ul li p {
+		font-size: 12px;
+	}
+}
+
+
+
+

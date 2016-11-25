@@ -1,0 +1,151 @@
+.cuadroUno {
+	width: 52%;
+	height: 50%;
+	position: relative;
+	top: 40px;
+	margin: auto;
+	background-color: rgba(14,14,14,.7);
+	border-radius: 10px;
+	-webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.cuadroUno .titulo {
+	display: block;
+	position: relative;
+	top: 0px;
+	padding: 20px;
+	font-size: 20px;
+	font-family: tahoma, Genova, sans-serif;
+	color: #FFF;
+	text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+
+.cuadroUno .btnFiltro {
+	width: 210px;
+	padding: 20px;
+	margin: 10px 20px;
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	background-color: rgba(255,255,255,.8);
+	border-radius: 15px;
+	border: 1px solid black;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+   -o-transition: all 500ms ease;
+   transition: all 500ms ease;
+
+}
+
+.cuadroUno .btnFiltro:hover {
+	background-color: rgba(34,101,255,.8);
+	font-size: 21px;
+	cursor: pointer; 
+}
+
+.cuadroUno .form, .cuadroUno #tituloIntermedioUno, .cuadroUno #tituloDos, .cuadroUno #tituloIntermedioDos, .cuadroUno #tituloIntermedioTres, .cuadroUno #tituloTres, .cuadroUno #tituloCuatro, .cuadroUno #btnPorCercania, .cuadroUno #btnPorEspecialidad, .cuadroUno #btnPorPrevision, .cuadroUno #btnFonasa, .cuadroUno #btnCruzBlanca, .cuadroUno #btnMasvida, .cuadroUno #btnConsalud, .cuadroUno #btnBanmedica, .cuadroUno #btnCruzDelNorte, .cuadroUno #btnMostrarTodos, .cuadroUno #btnCirugiaAdultos, .cuadroUno #btnKinesiologia, .cuadroUno #btnMedicinaGeneral, .cuadroUno #btnPediatriaGeneral, .cuadroUno #btnTraumatologia, .cuadroUno #btnCBB, .cuadroUno #btnCT, .cuadroUno #btnHH, .cuadroUno #btnOtraBusqueda {
+	display: none;
+}
+
+.cuadroUno .form input {
+	color: #000;
+}
+
+.cuadroUno .form #textoDir{
+	width: 80%;
+	padding: 6px;
+	border-radius: 10px;
+	text-align:center;
+	margin-top:10px;
+}
+
+.cuadroUno .center {
+	text-align: center;
+	color: #000;
+}
+
+
+
+@media screen and (max-width: 1000px){
+	
+	.cuadroUno {
+		width: 70%;
+	}
+}
+
+
+
+@media screen and (max-width: 800px){
+	
+	.cuadroUno .btnFiltro {
+		width: 150px;
+		font-size: 15px;
+		padding: 10px;
+	}
+	
+	.cuadroUno .btnFiltro:hover {
+		font-size: 15px;
+	}
+}
+
+
+
+@media screen and (max-width: 420px){
+	
+	.cuadroUno {
+		width: 100%;
+	}
+	
+	.cuadroUno .titulo {
+		font-size: 15px;
+	}
+	
+	.cuadroUno .btnFiltro {
+		width: 120px;
+		font-size: 13px;
+		padding: 5px 1px;
+	}
+	
+	.cuadroUno .btnFiltro:hover {
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
